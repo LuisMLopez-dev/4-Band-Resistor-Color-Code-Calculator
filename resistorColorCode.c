@@ -51,7 +51,7 @@ void printBandInformation(void){
         "6 --> Blue", 
         "7 --> Violet",
         "8 --> Grey",
-        "9 --> White",
+        "9 --> White\n",
         "FOURTH BAND ONLY:",
         "2 --> Red (Tolerance = +/- 1%)",
         "3 --> Orange (Tolerance = +/- 2%)",
@@ -80,7 +80,7 @@ void resistorColorCodeCalculator(void){ //This resistor color code calculator is
 
     printBandInformation(); //Calls the function that prints the information about the band colors
     do{ //Enter the values of the four bands
-        printf("Enter the value of the first band: ");
+        printf("\nEnter the value of the first band: ");
         scanf("%d", &firstBandValue);
         printf("Enter the value of the second band: ");
         scanf("%d", &secondBandValue);
