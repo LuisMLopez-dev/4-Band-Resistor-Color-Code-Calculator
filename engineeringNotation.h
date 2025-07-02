@@ -17,12 +17,12 @@ void engineeringNotationConverter(double resistorValue, double toleranceValue){
     bool inUpperOutsideRange = false; //True represents that engNotationNumber is above 999, False represents it is between 0 and 1
 
     if (engNotationNumber == 0){ 
-        printf("The value of you resistor is 0 ohms\n"); 
+        printf("The value of your resistor is 0 ohms\n"); 
         return;
     }
 
     if((engNotationNumber >= 1 && engNotationNumber < 1000)){ //If the user's number is already in engineering notation, then exit the function
-        printf("The value of you resistor is %.2lf ohms Tolerance = +/- %.2lf%%\n", engNotationNumber, toleranceValue); //Prints the number in Engineering Notation in the format of a number with the corresponding prefix
+        printf("The value of your resistor is %.2lf ohms Tolerance = +/- %.2lf%%\n", engNotationNumber, toleranceValue); //Prints the number in Engineering Notation in the format of a number with the corresponding prefix
         return; //Empty return to exit this function
     }
 
@@ -52,7 +52,7 @@ void engineeringNotationConverter(double resistorValue, double toleranceValue){
             exponentCount--; //Decrease exponent count
         }
     }
-    printf("The value of you resistor is %.2lf %c ohms Tolerance = +/- %.2lf%%\n", engNotationNumber, prefixSymbol(exponentCount), toleranceValue); //Prints the number in Engineering Notation in the format of a number with the corresponding prefix
+    printf("The value of your resistor is %.2lf %c ohms Tolerance = +/- %.2lf%%\n", engNotationNumber, prefixSymbol(exponentCount), toleranceValue); //Prints the number in Engineering Notation in the format of a number with the corresponding prefix
 }
 
 char prefixSymbol(int exponentCount){
