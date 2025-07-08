@@ -74,7 +74,8 @@ bool isValidBandValue(int bandValue){
     return bandValue > -1 && bandValue < 10;
 }
 
-void resistorColorCodeCalculator(void){ //This resistor color code calculator is for 4-band resistors
+//Performs the calculations for a 4-band resistor
+void resistorColorCodeCalculator(void){ 
     int firstBandValue, secondBandValue, thirdBandValue, fourthBandValue = 0;
     double preEngNotationResistorValue, toleranceValue = 0.00;
 
@@ -130,7 +131,6 @@ double toleranceBandValue(int fourthBandValue){
             break;
         default:
             toleranceValue = 0;
-            break;
     }
     return toleranceValue;
 }
