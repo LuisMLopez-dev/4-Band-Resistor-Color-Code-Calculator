@@ -3,13 +3,8 @@
 #include <stdlib.h>
 #include <stdbool.h>
 
-#ifndef ENGINEERING_NOTATION_H
-#define ENGINEERING_NOTATION_H
-
 void engineeringNotationConverter(double resistorValue, double toleranceValue);
 char prefixSymbol(int exponentCount);
-
-#endif // ENGINEERING_NOTATION_H
 
 void engineeringNotationConverter(double resistorValue, double toleranceValue){
     double engNotationNumber = resistorValue; //Will hold the value of the converted number,
@@ -57,23 +52,7 @@ void engineeringNotationConverter(double resistorValue, double toleranceValue){
 
 char prefixSymbol(int exponentCount){
     char prefixChar;
-
     switch(exponentCount){
-        case 24:
-            prefixChar = 'Y'; //Yotta
-            break;
-        case 21:
-            prefixChar = 'Z'; //Zetta
-            break;
-        case 18:
-            prefixChar = 'E'; //Exa
-            break;
-        case 15:
-            prefixChar = 'P'; //Peta
-            break;
-        case 12:
-            prefixChar = 'T'; //Tera
-            break;
         case 9:
             prefixChar = 'G'; //Giga
             break;
@@ -82,30 +61,6 @@ char prefixSymbol(int exponentCount){
             break;
         case 3:
             prefixChar = 'k'; //Kilo
-            break;
-        case -3:
-            prefixChar = 'm'; //Milli
-            break;
-        case -6:
-            prefixChar = 'u'; //Micro (µ)
-            break;
-        case -9:
-            prefixChar = 'n'; //Nano
-            break;
-        case -12:
-            prefixChar = 'p'; //Pico
-            break;
-        case -15:
-            prefixChar = 'f'; //Femto
-            break;
-        case -18:
-            prefixChar = 'a'; //Atto
-            break;
-        case -21:
-            prefixChar = 'z'; //Zepto
-            break;
-        case -24:
-            prefixChar = 'y'; //Yocto
             break;
         default:
             prefixChar = ' ';
